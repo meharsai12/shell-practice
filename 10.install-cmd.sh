@@ -16,7 +16,9 @@ fi
 
 dnf list installed mysql
 
-#If the response is 0 by running command $?= The output of previous command 
+#If the response is 0 by running command $?= The output of previous command . #? -- Previous script result
+#$?=0 -- Success
+#$? -ne 0 --- FAilure
 
 if [ $? -ne 0 ]
 then 
