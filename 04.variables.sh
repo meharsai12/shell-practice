@@ -5,5 +5,5 @@ PERSON2=$2 #passing valuues as arguments while running script
 
 
 
-echo "PERSON1 is good "
-echo "PERSON2 is brother of PERSON1"
+echo "$PERSON1 is good "
+echo "$PERSON2 is brother of $PERSON1"
