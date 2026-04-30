@@ -10,7 +10,7 @@ echo " Error :; You don't have root access to perform"
 exit 1
 
 else
-   echo "You have root aces you can perform"
+   echo "You have root acces you can perform"
 fi
 
 VALIDATE(){
@@ -27,11 +27,26 @@ VALIDATE(){
 
  if [ $? -ne 0 ]
  then
-    echo "Mysql i snot installed going to install it "
+    echo "Mysql is not installed going to install it "
     dnf list install mysql -y
     VALIDATE $? "mysql"
  else
 
-    echo " Mysql i salreasdy installed nothing to do "
+    echo " Mysql is alreasdy installed nothing to do "
 
  fi 
+
+
+ dnf list installed nginx
+
+ if [ $? -ne 0 ]
+ then 
+
+ echo " Nginx is not installed going to install it "
+    dnf install nginx -y
+    VALIDATE $? "nginx"
+
+ else
+    echo " Nginx is already installed :: Nothing to do "
+
+fi
