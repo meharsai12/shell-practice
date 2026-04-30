@@ -23,12 +23,12 @@ VALIDATE(){
     fi
 }
 
- dnf list installed mysql
+ dnf list installed mysql-server
 
  if [ $? -ne 0 ]
  then
     echo "Mysql is not installed going to install it "
-    dnf list install mysql -y
+    dnf list install mysql-server
     VALIDATE $? "mysql"
  else
 
