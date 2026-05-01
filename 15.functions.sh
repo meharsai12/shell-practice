@@ -10,7 +10,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 PACKAGES=("mysql" "python" "nginx" "httpd")
 
-mkdir -p $LOGS_FOLDER
+mkdir -p $LOGS_FOLDER  #i fnot it willcreate directory , I f the directory is there it will skip
 echo "Script started executing at: $(date)" 
 
 if [ $USERID -ne 0 ]
